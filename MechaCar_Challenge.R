@@ -1,0 +1,36 @@
+# Import libraries
+library(tidyverse)
+library(dplyr)
+
+# Deliverable 1 - Linear Regression to predict MPG
+# Import and Read MechaCar data csv as a dataframe or table.
+MechaCar_mpg <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors = F)
+
+# Linear regression
+lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, MechaCar_mpg)
+
+# Using summary to determine thep-value and r-squared
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, MechaCar_mpg))
+
+# Deliverable 2 - Summary Statistic on Suspension Coils
+
+# Import and read suspension_coil csv as a dataframe or table
+Suspension_Coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors = F)
+
+# Develop a Total Summary Dataframe
+total_summary <- Suspension_Coil %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI), Variance_PSI=var(PSI), STDEV_PSI=sd(PSI))
+
+# Create the lot summary dataframe
+lot_summary <- Suspension_Coil %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI), Median_PSI=median(PSI), Variance_PSI=var(PSI), STDEV_PSI=sd(PSI), .groups = 'keep')
+
+# Deliverable 3 - T-Test on Suspension Coils
+# Perform t-test to determine if all manufacturing lots is different from population mean
+t.test(Suspension_Coil$PSI, mu=1500)
+
+# Perform t-test to determine if each lots individually are statistical different from  population mean
+# Lot1
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot1")$PSI, mu= 1500)
+# Lot2
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot2")$PSI, mu= 1500)
+# Lot3
+t.test(subset(Suspension_Coil, Manufacturing_Lot == "Lot3")$PSI, mu= 1500)

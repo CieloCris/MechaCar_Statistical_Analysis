@@ -22,7 +22,7 @@ Our first objective was to perform a Multiple Linear Regression using R language
 
 **- Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
 
-The variables/coefficients Vehicle Length and Ground Clearance are statistically significant because their p-values are below 0.05. That also means that those variables provide a non-random amount of variance to the mpg values. 
+The variables/coefficients **Vehicle Length** and **Ground Clearance** are statistically significant because their p-values are below 0.05. That also means that those variables provide a non-random amount of variance to the mpg values. 
 
 **- Is the slope of the linear model considered to be zero? Why or why not?**
 

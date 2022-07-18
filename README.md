@@ -83,8 +83,8 @@ The performance of the metrics of the MechaCar vehicles against the performances
 The performance of the metrics of the MechaCar vehicles  against the performance of the metrics of the competitors' vehicles are not the same and have a significant difference concerning utility
 
 ##### Statistical test
-First, We determine to perform multiples linear regressions to find if there are differences between the variables examined.
+First, We decide to perform multiple linear regressions to find if there are differences between the variables examined.
 
-Second, We also decide to perform an Analysis of Variance (ANOVA) to study the performance of the MechaCar vehicles versus the performance of the competition's vehicles. This study will help us validate to determine if the differences are statistically significant.
+Second, We also determine to perform an Analysis of Variance (ANOVA) to study the performance of the MechaCar vehicles versus the performance of the competition's vehicles. This study will help us validate to know if the differences are statistically significant.
 
 To carry out these statistical tests we need to obtain and collect data about the cost, fuel efficiency, maintenance costs, and safety ratings of MechaCar vehicles and the competition's vehicles. The sample must be random and significant. We recommend a sample greater than 50 per vehicle for the dataset.  
